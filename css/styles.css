@@ -1,5 +1,51 @@
-ul {
-    list-style-type: none;
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
     margin: 0;
-    padding: 0;
-  }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+header li {
+  display: inline;
+  float: left;
+}
+
+header a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+header a:hover {
+    background-color: gray;
+    transition: background-color 1s;
+    transition-timing-function: ease;
+}
+#github{
+    color: gray;
+}
+#github:hover{
+    color: black;
+    transition: color 1s;
+    transition-timing-function: ease;
+}
