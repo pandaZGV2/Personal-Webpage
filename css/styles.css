@@ -47,10 +47,10 @@ header a:hover {
   text-decoration: none;
 }
 #github {
-  color: black;
+  color: hsla(0, 0%, 100%, 0.445);
 }
 #github:hover {
-  color: gray;
+  color: hsla(0, 0%, 100%, 0.788);
   transition: color 1s;
   transition-timing-function: ease;
 }
