@@ -4,7 +4,7 @@ body {
   animation: gradient 15s ease infinite;
   margin: 0;
   position: relative;
-  min-height: 100vh
+  min-height: 100vh;
 }
 header {
   font-family: "Saira Condensed", sans-serif;
@@ -66,13 +66,14 @@ header a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-footer{
+footer {
   padding-left: 48%;
   position: absolute;
   bottom: 0;
   width: 100%;
+  clear: both;
 }
-footer a{
+footer a {
   display: inline-block;
   color: white;
 }
