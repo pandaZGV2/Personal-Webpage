@@ -5,7 +5,9 @@ body {
   margin: 0;
   position: relative;
   min-height: 100vh;
-  margin-top: 10vh;
+  /* margin-top: 10vh; */
+  padding-top: 10vh;
+  overflow: auto;
 }
 header {
   font-family: "Saira Condensed", sans-serif;
@@ -73,6 +75,7 @@ footer {
   bottom: 0;
   width: 100%;
   clear: both;
+  margin-top: 3vh;
 }
 footer a {
   display: inline-block;
@@ -86,40 +89,62 @@ table {
   border: 1px gray solid;
   border-collapse: collapse;
   table-layout: fixed;
-  width: 90%;
+  width: 95%;
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0px 0px 10px black;
 }
-th,
-td {
+#merged_cells th,
+#merged_cells td {
   border: solid 1px gray;
   text-align: center;
   padding: 0.5%;
   font-family: "Saira Condensed", sans-serif;
 }
-tr:nth-child(even) {
+#merged_cells tr:nth-child(even) {
   background-color: #3c434b;
   color: white;
 }
-tr:nth-child(odd) {
+#merged_cells tr:nth-child(odd) {
   background-color: #2d3236;
   color: white;
 }
-tr th {
+#merged_cells tr th {
   background-color: #24282c;
 }
-tr:hover {
+#merged_cells tr:hover {
   color: rgb(196, 194, 194);
   transition: color 0.5s;
   transition-timing-function: ease;
 }
-table caption {
+#merged_cells table caption {
   caption-side: top;
   text-align: center;
   color: black;
   font-family: "Saira Condensed", sans-serif;
   font-size: 4vh;
+}
+form {
+  width: 85%;
+  margin: auto;
+  margin-top: 10vh;
+  padding-top: 8vh;
+  margin-bottom: 2vh;
+  z-index: 2;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 4vh;
+}
+#my_skills {
+  width: 90%;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: min(3vh, 3vw);
+  margin-top: 4vh;
+  /* margin-bottom: 4vh; */
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
 }
