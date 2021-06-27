@@ -13,7 +13,7 @@ function navrevert(id) {
   document.getElementById(id).style.color = "white";
   document.getElementById(id).style.transition = "color 1s ease";
 }
-function Addtotable() {
+function Addtotable(event) {
   let table_entry = { name: "", skill: "", level: "" };
   table_entry.name = document.getElementById("name").value;
   table_entry.skill = document.getElementById("skill").value;
@@ -30,6 +30,7 @@ function Addtotable() {
   curr_data.forEach((element) => {
     currentTable.innerHTML += `<tr><td>${element.name}</td><td>${element.skill}</td><td>${element.level}</td>`;
   });
+  event.preventDefault();
 }
 
 window.onload = function () {
