@@ -198,6 +198,8 @@ form {
   object-fit: contain;
   display: block;
   float: right;
+  box-shadow: 0px 0px 10px black;
+  border: black 1px solid;
 }
 .about-me .left {
   /* display: inline-block; */
