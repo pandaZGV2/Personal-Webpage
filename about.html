@@ -21,15 +21,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Saira+Condensed:wght@700&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
     <script src="js/scripts.js"></script>
+    <script src="js/fixednav.js"></script>
     <link rel="icon" href="./images/icon.jpg" type="image/x-icon">
     <title>About Me</title>
 </head>
 
 <body>
     <div id="page-container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark  z-index: 5;"
-            style="position: fixed; top: 0; width: 100%;">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html" onmouseover="navChange(this.id)" onmouseout="navrevert(this.id)"
                 id="nav1">Aaron Monis</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -52,7 +53,52 @@
             </div>
         </nav>
         <!-- <a id="github" href="https://github.com/pandaZGV2"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a> -->
-        <div>
+        <h1 id="about-heading">About Me</h1>
+        <div class="about-me">
+            <div class="left">
+                Hi, I am Aaron Anthony Monis! I'm 18 years old and in the CSE program of IIIT Hyderabad via the DASA
+                mode of admissions. I am a native of Mangalore, Karnataka, currently residing in Muscat, Oman.
+                I have always been interested in Computers. Eventually, I decided to actually take up Computer Science
+                as a study, and here I am, sleepy but satisfied with what I have learnt so far.
+            </div>
+            <div class="right"><img
+                    src="https://lh3.googleusercontent.com/pw/AM-JKLVyEEYCcJKrsUT6aM2fnrAB7uhnUmorByEZrLgLMhPFDO2_bFoNuNA8FtXzD6hjlfgh8vaHw15vEHU118sRuD1_HaSasVC4ElNRkk-Qn2dvdeDi3ErjjBGPY3DFokJHwK9JYLeDqv19kuldUN9ipJHn=w799-h797-no">
+            </div>
+        </div>
+        <div class="about-me">
+            <div class="left">
+                I am a foodie, a big one at that. I love eating any kinds of dishes, particularly sweet ones.
+                I love stories. If I find a story with an exciting or fresh premise, I will definitely go through it; no
+                matter the medium. By the way, if it can be read or watched, I prefer reading.<br>
+                As for sports, I like football, basketball, chess and swimming. I tend to follow these sports regularly.
+                I also participate in them from time to time (not now, of course, and I am not particularly good at them
+                either). I also follow Formula 1 regularly. Formula 1 is of fond interest due to the engineering side of
+                things and the psychological behaviour of the drivers. <br>
+                I like experimenting with OSes. I jump OSes from time to time. I currently use Ubuntu (daily driver),
+                Arch (flex), and Windows. I like ricing them as well, but I often prefer keeping things close to the
+                standard except for functional changes.
+            </div>
+            <div class="right"><img
+                    src="https://lh3.googleusercontent.com/pw/AM-JKLWXuo7uI6m3Ly6nhDpEDbsVlg5H4tehjObID6Y0rAlMd7M8ptlcfNsSnLqWndt39vRnGfyn7o943JByYk8Oiovn1760tA6d0GrmyYDyFaluzR5UTKZ6Vb0HH9iikxy0hZbZYr311HYzKtgp0S5ufgr8=w705-h696-no">
+            </div>
+        </div>
+        <div class="about-me">
+            <div class="left">
+                I am skilled in the following programming languages:
+                <ol>
+                    <li>C/C++</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                </ol>
+            </div>
+            <div class="right"><img
+                    src="https://lh3.googleusercontent.com/pw/AM-JKLUWZzh-LMCCjM8qinVbuxrU33tjssK6joWNOmQPtHr0gHbVq2ElxfJtHdA-qRrFA4fXDNHRwv6snbs1tCyxIqkK5-YQMjlrrnAQfdyu4oxqxkiVT2HSg-rqPRHVebzVAagF-NPJwLGIdzZpd0EwvSzK=w709-h689-no">
+            </div>
+        </div>
+        <div id="cycle5images">
             <div style="font-family: 'Dancing Script', cursive; width: 100%;text-align: center; font-size: 40px;">Image
                 Gallery</div>
             <img id="gallery" src="./images/desktop0.png" alt="Polybar Themes" title="Polybar Themes"
@@ -138,6 +184,21 @@
                     aria-hidden="true"></i></a>
         </footer> -->
     </div>
+    <script type="text/javascript">
+        // document.querySelector("#nav").classList.add("sticky-navbar");
+        window.onscroll = function () { sticky_navbar() };
+        var navbar = document.querySelector("#nav");
+        var offset = navbar.offsetTop;
+        function sticky_navbar() {
+            if (window.pageYOffset > offset) {
+                document.body.style.paddingTop = navbar.offsetHeight + "px";
+                navbar.classList.add("fixed-top")
+            } else {
+                document.body.style.paddingTop = 0;
+                navbar.classList.remove("fixed-top");
+            }
+        }
+    </script>
 </body>
 
 </html>

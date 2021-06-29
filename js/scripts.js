@@ -47,6 +47,7 @@ function load_table() {
     currentTable.innerHTML += `<tr><td>${element.name}</td><td>${element.skill}</td><td>${element.level}</td>`;
   });
 }
+
 // function load_images() {
 //   document.getElementById("page-container").innerHTML += `<img id="gallery" style="display: none;" src="./images/desktop0.png" alt="Polybar Themes" title="Polybar Themes">
 //   <img id="gallery" style="display: none;" src="./images/desktop1.png" alt="Polybar Themes" title="Polybar Themes">
@@ -54,3 +55,4 @@ function load_table() {
 //   <img id="gallery" style="display: none;" src="./images/desktop3.png" alt="Polybar Themes" title="Polybar Themes">
 //   <img id="gallery" style="display: none;" src="./images/desktop4.png" alt="Polybar Themes" title="Polybar Themes">`
 // }
+

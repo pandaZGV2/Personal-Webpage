@@ -23,13 +23,13 @@
         rel="stylesheet">
     <link rel="icon" href="./images/icon.jpg" type="image/x-icon">
     <script src="js/scripts.js"></script>
+    <script src="js/fixednav.js"></script>
     <title>Personal Webpage</title>
 </head>
 
 <body>
     <div id="page-container">
-        <nav style="position: fixed; top: 0; width: 100%;  z-index: 5;"
-            class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html" onmouseover="navChange(this.id)" onmouseout="navrevert(this.id)"
                 id="nav1">Aaron Monis</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -55,6 +55,21 @@
                     aria-hidden="true"></i></a>
         </footer>
     </div>
+    <script type="text/javascript">
+        // document.querySelector("#nav").classList.add("sticky-navbar");
+        window.onscroll = function () { sticky_navbar() };
+        var navbar = document.querySelector("#nav");
+        var offset = navbar.offsetTop;
+        function sticky_navbar() {
+            if (window.pageYOffset > offset) {
+                document.body.style.paddingTop = navbar.offsetHeight + "px";
+                navbar.classList.add("fixed-top")
+            } else {
+                document.body.style.paddingTop = 0;
+                navbar.classList.remove("fixed-top");
+            }
+        }
+    </script>
 </body>
 
 </html>
