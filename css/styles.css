@@ -65,6 +65,14 @@ header a:hover {
   transition: color 1s;
   transition-timing-function: ease;
 }
+#google {
+  color: hsla(0, 0%, 100%, 0.445);
+}
+#google:hover {
+  color: hsla(0, 0%, 100%, 0.788);
+  transition: color 1s;
+  transition-timing-function: ease;
+}
 #title-center {
   margin-left: 42vw;
   font-size: 17px;
@@ -163,16 +171,25 @@ form {
 #contact {
   color: black;
   font-family: "Saira Condensed", sans-serif;
-  font-size: 4vh;
+  font-size: 7vh;
 }
 #external-links {
   margin: auto;
 }
 #contact-info {
   text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 0;
 }
 #external-links #github,
-#external-links #facebook {
+#external-links #facebook, #external-links #google {
   margin-left: 1vw;
   margin-right: 1vw;
 }
