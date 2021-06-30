@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -16,16 +18,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Saira+Condensed:wght@700&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
-    <script src="js/scripts.js"></script>
-    <script src="js/fixednav.js"></script>
-    <link rel="icon" href="./images/icon.png" type="image/x-icon">
-    <title>Contact Me</title>
+    <link rel="icon" href="../images/icon.png" type="image/x-icon">
+    <script src="../js/scripts.js"></script>
+    <title>My Skills</title>
 </head>
 
 <body>
@@ -55,14 +53,45 @@
                 </div>
             </div>
         </nav>
-        <div id="contact-info">
-            <div id="contact">Contact Me at</div>
-            <div id="external-links"><a id="github" href="https://github.com/pandaZGV2"><i class="fa fa-github fa-5x"
-                        aria-hidden="true"></i></a>
-                <a id="facebook" href="https://www.facebook.com/aaron.monis.1/"><i class="fa fa-facebook fa-5x"></i></a>
-                <a id="google" href="mailto:aaronmonis22@gmail.com"><i class="fa fa-google fa-5x"></i></a>
+        <form class="text-dark justify-content-center" id="skills" onsubmit="Addtotable(event)">
+            <div class="form-group row">
+                <div class="form-group col-md-4">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control" id="name" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="skill">Skill</label>
+                    <input name="skill" type="text" class="form-control" id="skill" required />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="level">Level</label>
+                    <select name="level" id="level" class="form-control" required>
+                        <option selected disabled>Choose an Option</option>
+                        <option>Proficient</option>
+                        <option>Intermediate</option>
+                        <option>Beginner</option>
+                    </select>
+                </div>
             </div>
-        </div>
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-dark mt-3 btn-lg">Submit</button>
+                </div>
+            </div>
+        </form>
+        <table id="my_skills" class="table table-dark table-hover table-bordered text-center table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Skill</th>
+                    <th>Level</th>
+                </tr>
+            </thead>
+            <tbody id="skills_table">
+
+            </tbody>
+        </table>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <footer><a id="github" href="https://github.com/pandaZGV2"><i class="fa fa-github fa-2x"
                     aria-hidden="true"></i></a>
         </footer>
