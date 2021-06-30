@@ -233,3 +233,30 @@ form {
   text-align: center;
   margin-top: 2vh;
 }
+#my-profile {
+  width: 25vw;
+  margin: auto;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  display: block;
+  box-shadow: 0px 0px 5px black;
+}
+#home-page-intro {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 3vh;
+  text-align: center;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+figure figcaption {
+  text-align: center;
+  font-family: "Dancing Script", cursive;
+  font-size: 4vh;
+}
+#assignment-specifications {
+  font-family: 'Jetbrains Mono', monospace;
+  width: 90%;
+  margin: auto;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
