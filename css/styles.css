@@ -189,7 +189,8 @@ form {
   z-index: 0;
 }
 #external-links #github,
-#external-links #facebook, #external-links #google {
+#external-links #facebook,
+#external-links #google {
   margin-left: 1vw;
   margin-right: 1vw;
 }
@@ -199,15 +200,17 @@ form {
   width: 100%;
 }
 .about-me {
-  width: 90%;
+  width: 95%;
   margin: auto;
   margin-top: 10vh;
   margin-bottom: 4vh;
+  margin-right: 2vw;
+  /* margin-left: 2vw; */
   min-height: 100px;
   overflow: hidden;
-  font-family: 'Jetbrains Mono', monospace;
+  font-family: "Jetbrains Mono", monospace;
   /* font-size: min(2vh, 2vw); */
-  display: flex;
+  display: inline-block;
   justify-content: center;
   align-items: center;
 }
@@ -223,6 +226,10 @@ form {
   /* display: inline-block; */
   width: 60%;
   float: left;
+  margin-left: 10vw;
+  margin-right: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
 }
 
 #about-heading {
@@ -254,9 +261,53 @@ figure figcaption {
   font-size: 4vh;
 }
 #assignment-specifications {
-  font-family: 'Jetbrains Mono', monospace;
+  font-family: "Jetbrains Mono", monospace;
   width: 90%;
   margin: auto;
   margin-top: 3vh;
   margin-bottom: 3vh;
+}
+@media (max-width: 768px) {
+  .about-me {
+    margin: auto;
+    display: inline-block;
+  }
+  .about-me img {
+    clear: both;
+    float: none;
+    margin: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  .about-me .left {
+    /* display: block; */
+    width: 95vw;
+    clear: both;
+    margin: auto;
+    margin-left: 2vw;
+  }
+  
+  #merged_cells {
+    display: none;
+  }
+  #gallery {
+    width: 90%;
+    margin: auto;
+  }
+  #my-profile {
+    width: 60%;
+    transition-property: width;
+    transition-timing-function: ease 0.5s;
+    margin: auto;
+  }
+  #home-page-intro {
+    padding-right: 1vw;
+    padding-left: 1vw;
+  }
+  #assignment-specifications h1 {
+    font-size: 10vw;
+  }
+  #contact {
+    font-size: 10vw;
+  }
 }
