@@ -286,9 +286,12 @@ figure figcaption {
     margin: auto;
     margin-left: 2vw;
   }
-  
+
   #merged_cells {
-    display: none;
+    width: 100%;
+  }
+  #merged_cells tr {
+    font-size: 2vw;
   }
   #gallery {
     width: 90%;
@@ -309,5 +312,25 @@ figure figcaption {
   }
   #contact {
     font-size: 10vw;
+  }
+}
+@media (max-width: 1400px) {
+  .about-me {
+    margin: auto;
+    display: inline-block;
+  }
+  .about-me img {
+    clear: both;
+    float: none;
+    margin: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+  }
+  .about-me .left {
+    /* display: block; */
+    width: 95vw;
+    clear: both;
+    margin: auto;
+    margin-left: 2vw;
   }
 }
