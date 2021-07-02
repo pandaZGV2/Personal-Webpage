@@ -269,6 +269,7 @@ figure figcaption {
 }
 @media (max-width: 768px) {
   .about-me {
+    width: 100%;
     margin: auto;
     display: inline-block;
   }
@@ -281,7 +282,7 @@ figure figcaption {
   }
   .about-me .left {
     /* display: block; */
-    width: 95vw;
+    width: 90vw;
     clear: both;
     margin: auto;
     margin-left: 2vw;
@@ -316,6 +317,7 @@ figure figcaption {
 }
 @media (max-width: 1400px) {
   .about-me {
+    width: 100%;
     margin: auto;
     display: inline-block;
   }

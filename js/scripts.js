@@ -2,7 +2,7 @@ var key = 0;
 function CycleImages(name) {
   // console.log(name);
   key = (key + 1) % 5;
-  var newname = "../images/desktop" + key + ".png";
+  var newname = "../img/desktop" + key + ".png";
   document.getElementById("gallery").src = newname;
 }
 function navChange(id) {
@@ -18,6 +18,11 @@ function Addtotable(event) {
   table_entry.name = document.getElementById("name").value;
   table_entry.skill = document.getElementById("skill").value;
   table_entry.level = document.getElementById("level").value;
+  if (table_entry.level == "Choose an Option")
+  {
+    alert("Please Choose an Option!")
+    return false;
+  }
   document.getElementById("skills").reset();
   let curr_data_string = localStorage.getItem("table_data") || "[]";
   let curr_data = JSON.parse(curr_data_string);
@@ -27,10 +32,11 @@ function Addtotable(event) {
 
   currentTable = document.getElementById("skills_table");
   currentTable.innerHTML = "";
-  curr_data.forEach((element) => {
-    currentTable.innerHTML += `<tr><td>${element.name}</td><td>${element.skill}</td><td>${element.level}</td>`;
-  });
+  for (var i = 0; i < curr_data.length; i++) {
+    currentTable.innerHTML += `<tr><td>${curr_data[i].name}</td><td>${curr_data[i].skill}</td><td>${curr_data[i].level}</td>`;
+  }
   event.preventDefault();
+  return true;
 }
 
 window.onload = function () {
@@ -43,9 +49,9 @@ function load_table() {
   let curr_data = JSON.parse(curr_data_string);
   currentTable = document.getElementById("skills_table");
   currentTable.innerHTML = "";
-  curr_data.forEach((element) => {
-    currentTable.innerHTML += `<tr><td>${element.name}</td><td>${element.skill}</td><td>${element.level}</td>`;
-  });
+  for (var i = 0; i < curr_data.length; i++) {
+    currentTable.innerHTML += `<tr><td>${curr_data[i].name}</td><td>${curr_data[i].skill}</td><td>${curr_data[i].level}</td>`;
+  }
 }
 
 // function load_images() {
@@ -55,4 +61,3 @@ function load_table() {
 //   <img id="gallery" style="display: none;" src="./images/desktop3.png" alt="Polybar Themes" title="Polybar Themes">
 //   <img id="gallery" style="display: none;" src="./images/desktop4.png" alt="Polybar Themes" title="Polybar Themes">`
 // }
-
