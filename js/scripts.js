@@ -20,7 +20,7 @@ function Addtotable(event) {
   table_entry.level = document.getElementById("level").value;
   if (table_entry.level == "Choose an Option")
   {
-    alert("Please Choose an Option!")
+    alert("Please choose a valid skill level!")
     return false;
   }
   document.getElementById("skills").reset();
