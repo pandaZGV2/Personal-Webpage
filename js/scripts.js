@@ -33,7 +33,7 @@ function Addtotable(event) {
   currentTable = document.getElementById("skills_table");
   currentTable.innerHTML = "";
   for (var i = 0; i < curr_data.length; i++) {
-    currentTable.innerHTML += `<tr><td>${curr_data[i].name}</td><td>${curr_data[i].skill}</td><td>${curr_data[i].level}</td>`;
+    currentTable.innerHTML += `<tr><td>${curr_data[i].name}</td><td>${curr_data[i].skill}</td><td>${curr_data[i].level}</td></tr>`;
   }
   event.preventDefault();
   return true;
@@ -50,7 +50,7 @@ function load_table() {
   currentTable = document.getElementById("skills_table");
   currentTable.innerHTML = "";
   for (var i = 0; i < curr_data.length; i++) {
-    currentTable.innerHTML += `<tr><td>${curr_data[i].name}</td><td>${curr_data[i].skill}</td><td>${curr_data[i].level}</td>`;
+    currentTable.innerHTML += `<tr><td>${curr_data[i].name}</td><td>${curr_data[i].skill}</td><td>${curr_data[i].level}</td></tr>`;
   }
 }
 
